@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
         <nav class="navbar navbar-light bg-light">
@@ -15,15 +16,15 @@
     <form>
                 <div class="form-group">
                   <label for="formGroupExampleInput"> Your Name (Required)</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Harry Henderson">
+                  <input type="text" class="form-control" id="userName" placeholder="Harry Henderson">
                 </div>
                 <div class="form-group">
                   <label for="formGroupExampleInput2"> Link to Your Photo (Required)</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Photo URL">
+                  <input type="text" class="form-control" id="userPhoto" placeholder="Photo URL">
                 </div>
               </form>
         <hr>
-        <h3>Question 1</h3>
+        <h5>Question 1</h5>
         <p>You have a free afternoon, you choose to be active with your time.</p>
             <select class= "answer" id="q1">
               <option value=""></option>
@@ -33,7 +34,131 @@
               <option value="4">4</option>
               <option value="5">5 (Agree)</option>
             </select>
-          </form>
-    
+            <!-- ------------- -------------- ------------ -->
+        <h5>Question 2</h5>
+        <p>Favorite animal to have for a pet is a dog.</p>
+            <select class= "answer" id="q2">
+              <option value=""></option>
+              <option value="1">1 (Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Agree)</option>
+            </select>
+  <!-- ------------- -------------- ------------ -->
+        <h5>Question 3</h5>
+        <p>Winter time in Chicago is the Best time to vacation.</p>
+            <select class= "answer" id="q3">
+              <option value=""></option>
+              <option value="1">1 (Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Agree)</option>
+            </select>
+          <!-- ------------- -------------- ------------ -->
+        <h5>Question 4</h5>
+        <p>If you had extra snacks at the lunch table, you would keep them all for yourself.</p>
+            <select class= "answer" id="q4">
+              <option value=""></option>
+              <option value="1">1 (Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Agree)</option>
+            </select>
+          <!-- ------------- -------------- ------------ -->
+        <h5>Question 5</h5>
+        <p>Cooking is fun.</p>
+            <select class= "answer" id="q5">
+              <option value=""></option>
+              <option value="1">1 (Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Agree)</option>
+            </select>
+      <!-- ------------- -------------- ------------ -->
+      <h5>Question 6</h5>
+      <p>If given the chance to skydive I would go for it.</p>
+          <select class= "answer" id="q6">
+            <option value=""></option>
+            <option value="1">1 (Disagree)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Agree)</option>
+          </select>
+          <!-- ------------- -------------- ------------ -->
+        <h5>Question 7</h5>
+        <p>I prefer animals over people most of the time.</p>
+            <select class= "answer" id="q7">
+              <option value=""></option>
+              <option value="1">1 (Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Agree)</option>
+            </select>
+              <!-- ------------- -------------- ------------ -->
+        <h5>Question 8</h5>
+        <p>The Earth is round.</p>
+            <select class= "answer" id="q8">
+              <option value=""></option>
+              <option value="1">1 (Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Agree)</option>
+            </select>
+              <!-- ------------- -------------- ------------ -->
+        <h5>Question 9</h5>
+        <p>Kit Kat bars are the best candy bar</p>
+            <select class= "answer" id="q9">
+              <option value=""></option>
+              <option value="1">1 (Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Agree)</option>
+            </select>
+              <!-- ------------- -------------- ------------ -->
+        <h5>Question 10</h5>
+        <p>Would you do it all over again if you could?.</p>
+            <select class= "answer" id="q10">
+              <option value=""></option>
+              <option value="1">1 (Disagree)</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 (Agree)</option>
+            </select>
+       <hr>
+       <!-- Button to submit survey & trigger modal -->
+        <button type="submit" class="btn btn-primary" id= submit data-toggle="modal" data-target="#match">
+        Find Friend
+        </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="match" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New Friend!</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h3 id="matchName"></h3>
+              <img id="matchPhoto" src="" alt="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>                         
 </body>
+<script src="javascript/survey.js"></script>
 </html>
